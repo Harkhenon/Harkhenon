@@ -1,14 +1,16 @@
 // == Import : npm
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 // == Import : local
+import Home from 'src/components/Home';
 import './app.scss';
 
 // == Composant
 const App = () => (
-  <div id="app">
-    React Boilerplate
-  </div>
+  <Switch>
+    <Route exact path="/" component={Home} />
+  </Switch>
 );
 
 // == Export

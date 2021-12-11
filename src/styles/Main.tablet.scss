@@ -1,0 +1,59 @@
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  html {
+
+    scroll-behavior: smooth;
+    body {
+
+      & #root {
+        
+
+        & header {
+
+          height: 100vh;
+          background-color: #0a0a0a;
+          background-image: url('/src/styles/images/autoportrait.png'), linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('/src/styles/images/datacenter.webp');
+          background-size: auto, auto, cover;
+          background-position: center bottom;
+          background-repeat: no-repeat;
+          background-clip: border-box;
+          width: 100vw;
+
+          & #header-hello {
+
+            text-align: center;
+            width: 60%;
+            height: 100vh;
+            margin: 0 auto;
+            padding-top: 100px;
+
+            & .header-hello-text {
+              padding: 15px;
+              border-radius: 8px;
+              margin: 0 auto;
+            }
+
+            & .header-pseudo-text {
+              padding: 15px;
+              border-radius: 8px;
+              margin: 0 auto;
+              font-size: 4.5em;
+            }
+          }
+
+          & #header-lang {
+          }
+        }
+
+        #whoami {
+          height: 100vh;
+          padding: 15px;
+          padding-top: 100px;
+          font-size: 1.6em;
+        }
+      }
+    }
+  }
+}
+
+

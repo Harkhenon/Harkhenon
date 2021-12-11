@@ -1,0 +1,29 @@
+body {
+  & #root {
+    & main {
+
+      background-color: #1D1B19;
+
+      & #main-content {
+        transition: all 0.5s ease-in-out;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        background: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      & #left-content {
+        transition: all 0.5s ease-in-out;
+        width: 63vw;
+        border-right: 1px solid #545454;
+      }
+
+      & #aside-content {
+        transition: all 0.5s ease-in-out;
+        width: 37vw;
+      }
+    }
+  }
+}

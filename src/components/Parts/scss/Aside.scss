@@ -1,0 +1,41 @@
+body {
+
+  & #root {
+
+    & main {
+
+        & #aside-content {
+
+          padding: 0;
+          margin: 0;
+
+          & #aside-inner-content {
+            transition: all 0.5s ease-in-out;
+            width: 25%;
+            height: 50%;
+            margin-top: 100px;
+            position: fixed;
+            left: 70%;
+          }
+
+          & #inner-square {
+            border: 1px solid #dadada;
+            width: inherit;
+            height: inherit;
+            padding: 0;
+            margin: 0;
+          }
+
+          & #outer-square {
+            border: 1px solid #dadada;
+            width: inherit;
+            height: inherit;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+

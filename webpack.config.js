@@ -1,17 +1,18 @@
+// Think to add some postcss plugins
+
+const webpack = require('webpack');
 // Node import
 const path = require('path');
 
 // Plugins de traitement pour dist/
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 // Config pour le devServer
 const host = 'localhost';
-const port = 8080;
-
-const devMode = process.env.NODE_ENV !== 'production';
+const port = 8082;
 
 // Config de Webpack
 module.exports = {
@@ -22,24 +23,22 @@ module.exports = {
     alias: {
       src: path.resolve(__dirname, 'src/'),
     },
+    fallback: {
+      "path": require.resolve("path-browserify")
+    }
   },
   // Points d'entrée pour le travail de Webpack
   entry: {
     app: [
-      // Styles
       './src/styles/index.scss',
-      // JS
       './src/index.js',
     ],
   },
   // Sortie
   output: {
-    // Nom du bundle
-    filename: 'app.js',
-    // Nom du bundle vendors si l'option d'optimisation / splitChunks est activée
+    filename: '[name].js',
     chunkFilename: 'vendors.js',
-    // Cible des bundles
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public'),
     publicPath: '/',
   },
   // Optimisation pour le build
@@ -50,12 +49,13 @@ module.exports = {
     },
     // Minification
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
+      new TerserPlugin({
         parallel: true,
-        sourceMap: false, // passer à true pour JS source maps
+        terserOptions: {
+          ecma: 6,
+        },
       }),
-      new OptimizeCSSAssetsPlugin({}),
+      new OptimizeCSSAssetsPlugin(),
     ],
   },
   // Modules
@@ -79,15 +79,12 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          // style-loader ou fichier
-          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          // Chargement du CSS
+          MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [require('autoprefixer')],
-              sourceMap: true,
+              //sourceMap: true,
             },
           },
           // SASS
@@ -96,15 +93,8 @@ module.exports = {
       },
       // Images
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: 'assets/',
-            },
-          },
-        ],
+        test: /\.(png|svg|jpe?g|gif|webp)$/,
+        type: 'asset/resource',
       },
       // fonts
       {
@@ -123,20 +113,24 @@ module.exports = {
     ],
   },
   devServer: {
-    overlay: true, // Overlay navigateur si erreurs de build
-    stats: 'minimal', // Infos en console limitées
-    progress: true, // progression du build en console
-    inline: true, // Rechargement du navigateur en cas de changement
-    open: true, // on ouvre le navigateur
+    liveReload: true, // progression du build en console
+    open: false, // on ouvre le navigateur
     historyApiFallback: true,
     host: host,
     port: port,
   },
+  
   plugins: [
     // Permet de prendre le index.html de src comme base pour le fichier de dist/
     new HtmlWebPackPlugin({
+      title: 'Homebank',
       template: './src/index.html',
       filename: './index.html',
+      'meta': {
+        'viewport': 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        'charset': 'utf-8',
+        'theme-color': '#4285f4'
+      }
     }),
     // Permet d'exporter les styles CSS dans un fichier css de dist/
     new MiniCssExtractPlugin({
