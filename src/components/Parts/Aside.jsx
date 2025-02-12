@@ -1,6 +1,3 @@
-import React, { createRef } from 'react';
-import { Rail, Sticky } from 'semantic-ui-react';
-
 import './scss/Aside.scss';
 
 const Aside = () => {

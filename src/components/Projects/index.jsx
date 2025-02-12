@@ -1,4 +1,3 @@
-import React from 'react'
 import { Progress } from 'semantic-ui-react';
 
 const Projects = () => {
@@ -77,7 +76,7 @@ const Projects = () => {
         <h2>QuizzTG</h2>
         <p>
           QuizzTG is a quizz-like game for help postmens/postwomens to easily learn
-          their "General Sort" (General sort is the ability to know links between
+          their &quot;General Sort&quot; (General sort is the ability to know links between
           street names and postman tour number).
         </p>
         <p>

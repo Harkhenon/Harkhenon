@@ -1,7 +1,7 @@
-@import 'vars';
-@import 'Main.computer';
-@import 'Main.tablet';
-@import 'Main.mobile';
+@use 'vars';
+@use 'Main.computer';
+@use 'Main.tablet' as Main2;
+@use 'Main.mobile' as Main3;
 
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
 

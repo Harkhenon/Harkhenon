@@ -1,6 +1,3 @@
-import React from 'react';
-import { Icon } from 'semantic-ui-react';
-
 import './scss/Header.scss';
 
 const Header = () => (
