@@ -1,17 +1,10 @@
 # Harkhenon
 
-Développeur qui code autant à la main qu'en **vibe coding** — l'IA comme collaborateur, pas comme raccourci.
+> Trop, ce n'est jamais assez.
 
-Je construis des interfaces en React, j'aime les choses propres et bien rangées, et je n'ai pas peur de laisser une IA écrire le code quand elle a compris l'intention.
+Développement Full-stack spécialisé **React et PHP**.
 
-## Stack du moment
-
-- **React** · **Vite** · **SCSS** · **Mantine UI**
-- Pas de backend : tout passe par les API (GitHub & autres)
-
-## Ce que vous trouverez ici
-
-Ce dépôt héberge mon portfolio — un site qui présente mes projets et la façon dont je travaille. Les projets affichés sont récupérés en direct depuis mon GitHub via l'API publique.
+Sans cesse à la recherche de nouvelles approches, je développe des outils personnels que je partage avec plaisir afin de rendre l'informatique plus simple et plus intuitive. Un doux mélange de technologies pour créer de la simplicité, du pratique et du performant.
 
 ## Me trouver
 
