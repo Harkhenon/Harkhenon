@@ -33,26 +33,26 @@
 
 .logoVscode,
 .logoMistral {
+  display: block;
   width: 84px;
   height: 84px;
-  color: var(--mantine-color-forest-3);
+  object-fit: contain;
   border-radius: 18px;
-  padding: 18px;
-  background: rgba(33, 137, 74, 0.06);
-  border: 1px solid rgba(33, 137, 74, 0.18);
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   .logoChip:hover & {
     transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(33, 137, 74, 0.18);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   }
 }
 
 .logoMistral {
-  width: 92px;
-  height: 92px;
-  padding: 16px;
-  color: var(--mantine-color-forest-2);
+  width: 104px;
+  height: 84px;
+  padding: 10px 14px;
 }
 
 .logoLabel {
