@@ -10,7 +10,7 @@ function Home() {
 
   return (
     <Stack align="center" gap="xl" className={classes.hero}>
-      <div className={classes.badge}>Vibe Coding · Développement classique</div>
+      <div className={classes.badge}>Trop, ce n'est jamais assez</div>
 
       <div className={classes.logoRow}>
         <span className={classes.logoChip}>
@@ -30,12 +30,14 @@ function Home() {
 
       <Stack align="center" gap="xs" className={classes.copy}>
         <Text className={classes.title} component="h1">
-          Je développe en <span className={classes.accent}>vibe coding</span>
-          <br />et de manière classique.
+          Développement Full-stack
+          <br />spécialisé <span className={classes.accent}>React et PHP</span>
         </Text>
         <Text className={classes.subtitle} component="p">
-          Deux approches complémentaires : la rigueur du code écrit à la main,
-          et la vitesse d'une IA qui comprend l'intention.
+          Sans cesse à la recherche de nouvelles approches, je développe des outils
+          personnels que je partage avec plaisir afin de rendre l'informatique plus
+          simple et plus intuitive. Un doux mélange de technologies pour créer de la
+          simplicité, du pratique et du performant.
         </Text>
       </Stack>
 
