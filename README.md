@@ -1,19 +1,22 @@
-# React + Vite
+# Harkhenon
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Développeur qui code autant à la main qu'en **vibe coding** — l'IA comme collaborateur, pas comme raccourci.
 
-Currently, two official plugins are available:
+Je construis des interfaces en React, j'aime les choses propres et bien rangées, et je n'ai pas peur de laisser une IA écrire le code quand elle a compris l'intention.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack du moment
 
-## React Compiler
+- **React** · **Vite** · **SCSS** · **Mantine UI**
+- Pas de backend : tout passe par les API (GitHub & autres)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Ce que vous trouverez ici
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+Ce dépôt héberge mon portfolio — un site qui présente mes projets et la façon dont je travaille. Les projets affichés sont récupérés en direct depuis mon GitHub via l'API publique.
 
-## Expanding the ESLint configuration
+## Me trouver
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🐙 [GitHub — @Harkhenon](https://github.com/Harkhenon)
+
+---
+
+*Conçu avec Vibe Coding · React · Mantine*
