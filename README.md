@@ -11,5 +11,3 @@ Sans cesse à la recherche de nouvelles approches, je développe des outils pers
 - 🐙 [GitHub — @Harkhenon](https://github.com/Harkhenon)
 
 ---
-
-*Conçu avec Vibe Coding · React · Mantine*
